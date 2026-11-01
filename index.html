@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aurelia — considered fashion for everyday living.">
+  <title>Aurelia | Modern, mindful fashion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement">Complimentary delivery on orders over ₹2,500 <span>•</span> Thoughtfully made in India</div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Aurelia home">aurelia<span>.</span></a>
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#new">New in</a><a href="#clothing">Clothing</a><a href="#accessories">Accessories</a><a href="#journal">Journal</a><a href="#about">Our story</a>
+    </nav>
+    <div class="header-actions"><button aria-label="Search" class="icon-button">⌕</button><button aria-label="Wishlist" class="icon-button">♡</button><button aria-label="Shopping bag" class="bag-button">Bag <span id="bag-count">0</span></button></div>
+  </header>
+  <main>
+    <section class="hero" aria-label="Featured collections">
+      <div class="slides">
+        <article class="slide active"><img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1800&q=85" alt="Woman wearing a soft sage outfit"><div class="slide-content"><p class="eyebrow">The quiet edit · 01</p><h1>Made for<br><em>slow days.</em></h1><p class="hero-copy">A considered collection in soft layers, natural textures, and shades inspired by the world around us.</p><a class="button button-light" href="#new">Explore the collection <span>→</span></a></div></article>
+        <article class="slide"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1800&q=85" alt="Fashion collection displayed in a bright studio"><div class="slide-content"><p class="eyebrow">Autumn / winter · 02</p><h1>Find your<br><em>everyday.</em></h1><p class="hero-copy">Versatile pieces designed to move with you, from first light to late evenings.</p><a class="button button-light" href="#clothing">Shop clothing <span>→</span></a></div></article>
+        <article class="slide"><img src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=1800&q=85" alt="Woman in a sophisticated navy outfit"><div class="slide-content"><p class="eyebrow">The essential edit · 03</p><h1>Less, but<br><em>lovelier.</em></h1><p class="hero-copy">Timeless silhouettes and thoughtful details that make getting dressed feel effortless.</p><a class="button button-light" href="#accessories">View essentials <span>→</span></a></div></article>
+      </div>
+      <button class="slider-arrow previous" aria-label="Previous slide">←</button><button class="slider-arrow next" aria-label="Next slide">→</button>
+      <div class="slider-dots" role="tablist" aria-label="Choose a slide"><button class="dot active" aria-label="Slide 1" aria-selected="true"></button><button class="dot" aria-label="Slide 2" aria-selected="false"></button><button class="dot" aria-label="Slide 3" aria-selected="false"></button></div>
+    </section>
+    <section class="intro" id="about"><p class="eyebrow">A gentler way to dress</p><h2>Beautiful things,<br><em>beautifully considered.</em></h2><p>We create modern essentials for a more mindful wardrobe — made with intention, chosen to last, and designed to feel like you.</p></section>
+    <section class="collection-section" id="new"><div class="section-heading"><div><p class="eyebrow">Curated for you</p><h2>The latest arrivals</h2></div><a class="text-link" href="#clothing">View all <span>→</span></a></div>
+      <div class="product-grid">
+        <article class="product-card"><div class="product-image"><span class="product-label">New</span><button class="wishlist" aria-label="Add linen dress to wishlist">♡</button><img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&w=700&q=80" alt="Sage linen dress"></div><div class="product-meta"><div><h3>The Linen Dress</h3><p>Soft sage</p></div><strong>₹3,490</strong></div></article>
+        <article class="product-card"><div class="product-image"><button class="wishlist" aria-label="Add relaxed shirt to wishlist">♡</button><img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=700&q=80" alt="White relaxed cotton shirt"></div><div class="product-meta"><div><h3>Relaxed Cotton Shirt</h3><p>Pearl white</p></div><strong>₹2,290</strong></div></article>
+        <article class="product-card"><div class="product-image"><span class="product-label">Bestseller</span><button class="wishlist" aria-label="Add tailored trousers to wishlist">♡</button><img src="https://images.unsplash.com/photo-1506629905607-d9c297d73e37?auto=format&fit=crop&w=700&q=80" alt="Navy tailored trousers"></div><div class="product-meta"><div><h3>Tailored Trousers</h3><p>Deep navy</p></div><strong>₹2,990</strong></div></article>
+        <article class="product-card"><div class="product-image"><button class="wishlist" aria-label="Add lavender knit to wishlist">♡</button><img src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=700&q=80" alt="Lavender knit cardigan"></div><div class="product-meta"><div><h3>Cloud Knit Cardigan</h3><p>Muted lavender</p></div><strong>₹3,190</strong></div></article>
+      </div>
+    </section>
+    <section class="values" id="journal"><div><span>01</span><h3>Thoughtful materials</h3><p>Natural fabrics chosen for comfort, quality, and a lighter footprint.</p></div><div><span>02</span><h3>Made to be kept</h3><p>Timeless design that lives beyond seasons and trends.</p></div><div><span>03</span><h3>People first</h3><p>Fair partnerships and a slower, more considered approach.</p></div></section>
+  </main>
+  <footer><div><a class="brand" href="#">aurelia<span>.</span></a><p>Mindful clothing for everyday living.</p></div><div class="footer-links"><a href="#about">Our story</a><a href="#journal">Journal</a><a href="#">Shipping & returns</a><a href="#">Contact</a></div><p class="copyright">© 2025 Aurelia Studio</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

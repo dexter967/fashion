@@ -1,0 +1,8 @@
+const slides=[...document.querySelectorAll(".slide")],dots=[...document.querySelectorAll(".dot")],nextButton=document.querySelector(".next"),previousButton=document.querySelector(".previous"),menuToggle=document.querySelector(".menu-toggle"),mainNav=document.querySelector(".main-nav");let currentSlide=0,slideTimer;
+function showSlide(index){currentSlide=(index+slides.length)%slides.length;slides.forEach((slide,i)=>slide.classList.toggle("active",i===currentSlide));dots.forEach((dot,i)=>{const active=i===currentSlide;dot.classList.toggle("active",active);dot.setAttribute("aria-selected",String(active))})}
+function restartAutoPlay(){clearInterval(slideTimer);slideTimer=setInterval(()=>showSlide(currentSlide+1),5500)}
+nextButton.addEventListener("click",()=>{showSlide(currentSlide+1);restartAutoPlay()});previousButton.addEventListener("click",()=>{showSlide(currentSlide-1);restartAutoPlay()});dots.forEach((dot,index)=>dot.addEventListener("click",()=>{showSlide(index);restartAutoPlay()}));
+menuToggle.addEventListener("click",()=>{const open=mainNav.classList.toggle("open");menuToggle.setAttribute("aria-expanded",String(open))});
+document.querySelectorAll(".wishlist").forEach(button=>button.addEventListener("click",()=>{button.textContent=button.textContent==="♡"?"♥":"♡";button.style.color=button.textContent==="♥"?"var(--lavender)":""}));
+document.querySelectorAll(".product-card").forEach(card=>card.addEventListener("click",event=>{if(event.target.closest(".wishlist"))return;const count=document.querySelector("#bag-count");count.textContent=Number(count.textContent)+1}));
+restartAutoPlay();
