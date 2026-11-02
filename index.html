@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
   <div class="announcement">Complimentary delivery on orders over ₹2,500 <span>•</span> Thoughtfully made in India</div>
@@ -16,10 +16,16 @@
     <a class="brand" href="#" aria-label="Aurelia home">aurelia<span>.</span></a>
     <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
     <nav class="main-nav" aria-label="Main navigation">
-      <a href="#new">New in</a><a href="#clothing">Clothing</a><a href="#accessories">Accessories</a><a href="#journal">Journal</a><a href="#about">Our story</a>
+      <a href="#new"><span class="nav-icon" aria-hidden="true">✦</span><span>New in</span></a><a href="#clothing"><span class="nav-icon" aria-hidden="true">👕</span><span>Clothing</span></a><a href="#accessories"><span class="nav-icon" aria-hidden="true">👜</span><span>Accessories</span></a><a href="#journal"><span class="nav-icon" aria-hidden="true">📖</span><span>Journal</span></a><a href="#about"><span class="nav-icon" aria-hidden="true">♡</span><span>Our story</span></a>
     </nav>
-    <div class="header-actions"><button aria-label="Search" class="icon-button">⌕</button><button aria-label="Wishlist" class="icon-button">♡</button><button aria-label="Shopping bag" class="bag-button">Bag <span id="bag-count">0</span></button></div>
+    <div class="header-actions"><button aria-label="Search" class="icon-button" id="search-button">⌕</button><button aria-label="Wishlist" class="icon-button" id="wishlist-button">♡</button><button aria-label="Shopping bag" class="bag-button">Bag <span id="bag-count">0</span></button></div>
   </header>
+  <section class="utility-panel search-panel" id="search-panel" aria-label="Search products" hidden>
+    <div class="utility-panel-inner"><label for="search-input">Search our collection</label><button class="panel-close" aria-label="Close search">×</button><input id="search-input" type="search" placeholder="Search clothing and accessories..." autocomplete="off"><div class="search-results" id="search-results"></div></div>
+  </section>
+  <section class="utility-panel wishlist-panel" id="wishlist-panel" aria-label="Wishlist" hidden>
+    <div class="utility-panel-inner"><h2>Your wishlist</h2><button class="panel-close" aria-label="Close wishlist">×</button><div class="wishlist-results" id="wishlist-results"></div></div>
+  </section>
   <main>
     <section class="hero" aria-label="Featured collections">
       <div class="slides">
@@ -47,6 +53,6 @@
     <section class="values" id="journal"><div><span>01</span><h3>Thoughtful materials</h3><p>Natural fabrics chosen for comfort, quality, and a lighter footprint.</p></div><div><span>02</span><h3>Made to be kept</h3><p>Timeless design that lives beyond seasons and trends.</p></div><div><span>03</span><h3>People first</h3><p>Fair partnerships and a slower, more considered approach.</p></div></section>
   </main>
   <footer><div><a class="brand" href="#">aurelia<span>.</span></a><p>Mindful clothing for everyday living.</p></div><div class="footer-links"><a href="#about">Our story</a><a href="#journal">Journal</a><a href="#">Shipping & returns</a><a href="#">Contact</a></div><p class="copyright">© 2025 Aurelia Studio</p></footer>
-  <script src="script.js"></script>
+  <script src="script.js?v=2"></script>
 </body>
 </html>
